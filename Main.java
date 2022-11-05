@@ -1,13 +1,15 @@
 public class Main {
-    String exp="( )(( )){([( )])}";
-    String exp1=" )(( )){([( )])}";
-    String exp2="({})";
-    String expr="{";
+    public static void main(String[] args) {
+        String exp1 = " )(( )){([( )])}";
+        String exp2 = "()";
+        String expr = "{";
+         isMatched(exp2);
+    }
 
-public static boolean isMatched(String expression){
+    public static boolean isMatched(String expression) {
     final String opening = "({[";
     final String closing = ")}]";
-    Stack<Character> buffer=new LinkedStack<>();
+    Stack<Character> buffer=new ArrayStack<>(1000);
     for (char c:expression.toCharArray()
          ) {
         if(opening.indexOf(c)!=-1){
@@ -23,6 +25,7 @@ public static boolean isMatched(String expression){
         }
     }
     return buffer.isEmpty( );
-}
-}
 
+
+    }
+}

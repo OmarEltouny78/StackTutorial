@@ -1,3 +1,4 @@
+
 public class LinkedStack<E>implements Stack<E> {
     private SinglyLinkedLIst<E>list=new SinglyLinkedLIst<E>();
 

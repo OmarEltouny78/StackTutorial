@@ -27,11 +27,10 @@ public class ArrayStack<E> implements Stack<E>{
 
     @Override
     public E pop() {
-        if (isEmpty()) return null;
         E answer=data[t];
         data[t]=null;
         t--;
-        return data[t];
+        return answer;
     }
 
     @Override
